@@ -1,4 +1,4 @@
-# Verify
+# battle-chat
 
 To start your Phoenix server:
 
