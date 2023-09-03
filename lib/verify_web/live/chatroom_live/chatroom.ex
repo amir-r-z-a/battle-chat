@@ -92,7 +92,7 @@ defmodule VerifyWeb.Live.ChatroomLive.Chatroom do
         %Chatroom{} = chatroom ->
           query = from(c in UserChatroom, where: c.chatroom_id == ^chatroom.id and c.user_id == ^user.id)
           if Repo.one(query) == nil do
-            # Repo.insert!(%UserChatroom{user_id: user.id, chatroom_id: chatroom.id})
+            Repo.insert!(%UserChatroom{user_id: user.id, chatroom_id: chatroom.id})
             {:noreply, redirect(socket, to: "/chatroom/#{chatroom.id}/chat")}
           else
             {:noreply, assign(socket, error: "chatroom already exist")}
