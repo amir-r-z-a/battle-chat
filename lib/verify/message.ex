@@ -8,6 +8,7 @@ defmodule Verify.Message do
 
     belongs_to :user, Verify.Users.User
     belongs_to :chatroom, Verify.Chatroom
+    field :is_private, :boolean, default: false
 
     timestamps()
   end

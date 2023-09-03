@@ -6,6 +6,7 @@ defmodule Verify.Repo.Migrations.CreateMessages do
       add :content, :string
       add :user_id, references(:users, on_delete: :delete_all)
       add :chatroom_id, references(:chatrooms, on_delete: :delete_all)
+      add :is_private, :boolean, default: false
       timestamps()
     end
 
