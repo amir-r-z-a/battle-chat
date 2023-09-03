@@ -12,10 +12,12 @@ defmodule VerifyWeb.Live.ChatLive.ChatComponent do
               <p style="color: blue"><%= @content %></p>
             </div>
           <% else %>
-          <div style="margin: 60PX " >
-            <h3 style="color:red" ><%= @user_number %></h3>
-            <p style="color:blue"><%= @content %></p>
-          </div>
+          <%= if not @is_private do %>
+            <div style="margin: 60PX " >
+              <h3 style="color:red" ><%= @user_number %></h3>
+              <p style="color:blue"><%= @content %></p>
+            </div>
+          <% end %>
           <% end %>
     </div>
     """
