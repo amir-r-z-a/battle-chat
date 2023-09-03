@@ -13,6 +13,8 @@ defmodule Verify.Users.User do
 
     has_many :messages, Verify.Message
 
+    field :random, :integer
+
     timestamps()
   end
 end

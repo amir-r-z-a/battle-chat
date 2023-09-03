@@ -5,7 +5,7 @@ defmodule Verify.Repo.Migrations.CreateUsers do
     create table(:users) do
       add :number, :string, null: false
       add :password_hash, :string
-
+      add :random , :integer
       timestamps()
     end
 
